@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Record Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <div class="clock-container">
+          <span>🕒</span>
+
+          <span id="clock"></span>
+        </div>
+
+        <button id="themeBtn">🌙 Dark Mode</button>
+      </div>
+
+      <h1>Student Record Management System</h1>
+
+      <div class="form-container">
+        <div class="form-group">
+          <label>Student ID</label>
+          <input
+            type="text"
+            id="studentId"
+            placeholder="Auto Generated"
+            readonly
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Student Name</label>
+          <input type="text" id="name" placeholder="Enter Student Name" />
+        </div>
+
+        <div class="form-group">
+          <label>Registration Number</label>
+          <input
+            type="text"
+            id="regNo"
+            placeholder="Enter Registration Number"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Roll Number</label>
+          <input type="text" id="rollNo" placeholder="Enter Roll Number" />
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+
+          <select id="gender">
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="Enter Email" />
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" id="phone" placeholder="Enter Phone Number" />
+        </div>
+
+        <button id="addBtn">Add Student</button>
+      </div>
+
+      <div class="search-section">
+        <h2>Search Student</h2>
+
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by Student ID / Name / Registration Number / Roll Number"
+        />
+
+        <div class="sort-buttons">
+          <button id="sortName">Sort By Name</button>
+
+          <button id="sortRoll">Sort By Roll Number</button>
+
+          <button id="sortReg">Sort By Registration Number</button>
+        </div>
+      </div>
+
+      <h2>Student Records</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Registration No.</th>
+            <th>Roll No.</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="studentTable"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

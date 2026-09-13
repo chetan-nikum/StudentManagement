@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  padding: 40px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1300px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1f2937;
+}
+
+h2 {
+  margin: 30px 0 15px;
+  color: #1f2937;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+}
+
+#studentId {
+  background: #ececec;
+  cursor: not-allowed;
+}
+
+#addBtn {
+  grid-column: 1/-1;
+  width: 220px;
+  justify-self: center;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.search-section {
+  margin-top: 40px;
+}
+
+#search {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+#search:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: #2563eb;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #eef4ff;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 2px;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #16a34a;
+}
+
+.edit-btn:hover {
+  background: #15803d;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.no-data {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #addBtn {
+    width: 100%;
+  }
+}
+
+.sort-buttons {
+  margin-top: 20px;
+
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.sort-buttons button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.sort-buttons button:hover {
+  background: #1d4ed8;
+}
+
+.top-bar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.clock-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #1f2937;
+}
+
+body.dark .clock-container {
+  color: white;
+}
+
+#themeBtn {
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #1f2937;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+#themeBtn:hover {
+  background: #111827;
+}
+
+body.dark {
+  background: #111827;
+}
+
+body.dark .container {
+  background: #1f2937;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark label {
+  color: white;
+}
+
+body.dark input,
+body.dark select {
+  background: #374151;
+
+  color: white;
+
+  border: 1px solid #4b5563;
+}
+
+body.dark input::placeholder {
+  color: #d1d5db;
+}
+
+body.dark #studentId {
+  background: #4b5563;
+}
+
+body.dark table {
+  color: white;
+}
+
+body.dark thead {
+  background: #2563eb;
+}
+
+body.dark tbody tr:nth-child(even) {
+  background: #374151;
+}
+
+body.dark tbody tr:hover {
+  background: #4b5563;
+}
+
+body.dark td {
+  border-bottom: 1px solid #4b5563;
+}
+
+body.dark .no-data {
+  color: #ddd;
+}
+
+body.dark #search {
+  background: #374151;
+
+  color: white;
+}
+
+body.dark #themeBtn {
+  background: white;
+
+  color: #111827;
+}
+
+.highlight {
+  background: #fff3cd !important;
+
+  color: #000 !important;
+
+  font-weight: 600;
+}
+
+body.dark .highlight {
+  background: #facc15 !important;
+
+  color: #111827 !important;
+}
