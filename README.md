@@ -21,7 +21,7 @@ A simple student record management system built using HTML, CSS, and JavaScript.
 - HTML
 - CSS
 - JavaScript
-- Browser localStorage
+- Browser's localStorage
 
 ## Running the project
 
